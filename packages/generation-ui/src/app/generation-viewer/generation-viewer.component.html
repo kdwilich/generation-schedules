@@ -1,0 +1,10 @@
+<div *ngIf="schedule" class="project-container">
+  <h3 style="margin: 0">{{project.name}}</h3>
+  <div class="schedule-container">
+    <div
+      *ngFor="let hourlyRate of makeRelative(schedule.timeline)"
+      class="hourly-rate-bar"
+      [style]="{height: hourlyRate + 'px'}"
+    ></div>
+  </div>
+</div>

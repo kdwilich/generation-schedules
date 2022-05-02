@@ -1,0 +1,20 @@
+export const PROJECTS = [
+  { id: 'BBD', name: 'Broken Bow' },     
+  { id: 'BEV', name: 'Beaver' },
+  { id: 'BSD', name: 'Bull Shoals' },    
+  { id: 'CAN', name: 'Clarence Cannon' },
+  { id: 'DAD', name: 'Dardanelle L&D' }, 
+  { id: 'DEN', name: 'Denison' },        
+  { id: 'EUF', name: 'Eufaula' },        
+  { id: 'FGD', name: 'Fort Gibson' },
+  { id: 'GFD', name: 'Greers Ferry' },
+  { id: 'HST', name: 'Harry S Truman' },
+  { id: 'KEY', name: 'Keystone' },
+  { id: 'NFD', name: 'Norfork' },
+  { id: 'OZK', name: 'Ozark L&D' },
+  { id: 'RSK', name: 'Robert S. Kerr L&D' },
+  { id: 'STD', name: 'Stockton' },
+  { id: 'TKD', name: 'Tenkiller' },
+  { id: 'TRD', name: 'Table Rock' },
+  { id: 'WFD', name: 'Webbers Falls L&D' }
+]

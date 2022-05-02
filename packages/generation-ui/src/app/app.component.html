@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Generation Schedules</h2>
+
+  <mat-button-toggle-group name="weekDays" [(value)]="selectedDay" (change)="onDayChange($event)">
+    <mat-button-toggle value="sun">Su</mat-button-toggle>
+    <mat-button-toggle value="mon">Mo</mat-button-toggle>
+    <mat-button-toggle value="tue">Tu</mat-button-toggle>
+    <mat-button-toggle value="wed">We</mat-button-toggle>
+    <mat-button-toggle value="thu">Th</mat-button-toggle>
+    <mat-button-toggle value="fri">Fr</mat-button-toggle>
+    <mat-button-toggle value="sat">Sa</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-form-field appearance="fill" style="padding-top: 8px;">
+    <mat-label>Project</mat-label>
+    <mat-select [(value)]="selectedProject" (selectionChange)="onProjectChange($event)" >
+      <mat-option *ngFor="let project of projects" [value]="project">
+        {{project.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <ng-container *ngIf="!loading; else showLoading">
+    <h3>{{scheduleData.date?.fullDate}}</h3>
+    <app-generation-viewer
+    *ngIf="selectedSchedule; else showAllSchedules"
+    [project]="selectedProject"
+    [schedule]="selectedSchedule"
+    ></app-generation-viewer>
+    <ng-template #showAllSchedules>
+      <ng-container *ngFor="let schedule of scheduleData.schedules">
+        <app-generation-viewer [project]="getProject(schedule.id)" [schedule]="schedule"></app-generation-viewer>
+      </ng-container>
+    </ng-template>
+  </ng-container>
+  <ng-template #showLoading>
+    <div class="loading-container">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</div>

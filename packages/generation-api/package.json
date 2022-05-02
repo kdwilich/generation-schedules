@@ -1,0 +1,25 @@
+{
+  "name": "generation-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dataframe-js": "^1.4.4",
+    "express": "^4.17.2",
+    "express-timeout-handler": "^2.2.2",
+    "morgan": "^1.10.0",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
