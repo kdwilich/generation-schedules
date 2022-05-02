@@ -1,1 +1,1 @@
-web: node src/index.js
+web: node packages/generation-api/src/index.js
